@@ -29,8 +29,7 @@ function criaCalculadora() {
                 if (el.classList.contains('btn-del')) {
                     this.apagaUm();
                 }
-
-            });
+            });    
         },
         btnParaDisplay(valor) {
             this.display.value += valor;
