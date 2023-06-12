@@ -22,7 +22,7 @@ function criaCalculadora() {
                     this.btnParaDisplay(el.innerText);
                 }
 
-                if (el.classList.contains('btn-clear')) {      
+                if (el.classList.contains('btn-clear')) {          
                     this.clearDisplay();
                 }
 
