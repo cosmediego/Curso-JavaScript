@@ -1,25 +1,7 @@
-// function* geradora1() {
-//     //qualquer código
-//     yield 'Valor 1';
-//     //qualquer código
-//     yield 'Valor 2';
-//     //qualquer código
-//     yield 'Valor 3';
-// }
+//método splice
 
-function* geradora2() {
-    let i = 0;
+const nomes = ['Cosme', 'Diego', 'Silva', 'Pontes', 'Augusto']
 
-    while (true) {
-        yield i;
-        i++;
-    }
-}
-
-const g2 = geradora2();
-console.log(g2.next().value);
-console.log(g2.next().value);
-console.log(g2.next().value);
-console.log(g2.next().value);
-console.log(g2.next().value);
-console.log(g2.next().value);
+//nomes.splice(indice, delete, elemet1, elemet2, elemet3)
+const removidos = nomes.splice(3, 1, 'Luiz')
+console.log(nomes, removidos);
