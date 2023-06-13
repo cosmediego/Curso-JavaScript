@@ -1,7 +1,25 @@
-function recursiva(max) {
-    console.log(max);
-    if (max >= 10) return;
-    max++;
-    recursiva(max);
+// function* geradora1() {
+//     //qualquer código
+//     yield 'Valor 1';
+//     //qualquer código
+//     yield 'Valor 2';
+//     //qualquer código
+//     yield 'Valor 3';
+// }
+
+function* geradora2() {
+    let i = 0;
+
+    while (true) {
+        yield i;
+        i++;
+    }
 }
-recursiva(0);
+
+const g2 = geradora2();
+console.log(g2.next().value);
+console.log(g2.next().value);
+console.log(g2.next().value);
+console.log(g2.next().value);
+console.log(g2.next().value);
+console.log(g2.next().value);
