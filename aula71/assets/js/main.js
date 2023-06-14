@@ -1,13 +1,20 @@
-// Factory functions / Constructor functions / Classes
-function Pessoa(nome, sobrenome) {
+// defineProperty -> Getter e Setters
+function Produto(nome, preco, estoque) {
     this.nome = nome;
-    this.sobrenome = sobrenome;
+    this.preco = preco;
 
-    Object.freeze(this);//TRAVA OS ONJETOS DESSA FUNÇÃO, NÃO É POSSÍVEL ALTERAR OS VALORES
+    Object.defineProperty(this, 'estoque', {
+        enumerable: true, // mostra a chave
+        value: estoque, // valor
+        writable: true, // pode alterar o valor da variável
+        configurable: true // configurável
+    });
+
 }
 
-const p1 = new Pessoa('Luiz', 'Miranda');
-const p2 = new Pessoa('Maria', 'Miranda');
+const p1 = new Produto('Camiseta', 20, 3);
+console.log(Object.keys(p1));
 
-console.log(p1);
-console.log(p2); 
+for (let chave in p1) {
+    console.log(chave);
+}
